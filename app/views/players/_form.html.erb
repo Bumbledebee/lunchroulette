@@ -18,6 +18,11 @@
     <%= f.label :email %><br />
     <%= f.email_field :email %>
   </div>
+  <div class="field">
+    <%= f.label :department %><br />
+    <%= f.collection_select :department, Player::DEPARTMENTS, :to_s, :to_s, 
+       :include_blank => true %>
+  </div>
 
 
   <div class="actions">
