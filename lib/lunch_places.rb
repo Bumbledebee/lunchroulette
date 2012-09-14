@@ -5,11 +5,11 @@ require 'random_enumerable'
 class LunchPlaces
   include RandomEnumerable
   @@names = [
-"Cô Cô",
-"Kuchi",
-"Altes Europa",
-"Monsiuer Vuong",
-"Yam Yam",
+"RosenBurger",
+"PapaPane",
+"Dang Fang",
+"Yurok",
+"xxxxx",
 "Antipodes",
 "Luigi Zuckermann",
 "Yumcha Heroes",

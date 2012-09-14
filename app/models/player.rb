@@ -5,5 +5,5 @@ class Player < ActiveRecord::Base
     :message => "Someone already signed up with that name - please distinguish yourself!" }
   attr_accessible :email, :name
 
-  DEPARTMENTS = ['Customer Support', 'IT and Product', 'HR', 'Administrative', 'Billing']
+  DEPARTMENTS = ['Customer Support', 'IT and Product', 'HR and Administrative', 'Billing', 'Advertiser', 'Publisher', 'Marketing and Design']
 end
