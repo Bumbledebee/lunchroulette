@@ -5,9 +5,10 @@ require 'random_enumerable'
 class LunchPics
   include RandomEnumerable
   @@pics = [
-"http://www.thedogfiles.com/wp-content/uploads/2011/03/dog-restuarant.jpg",
-"http://nbcoutofbounds.files.wordpress.com/2012/04/twodogs.jpg",
-"http://www.funiacs.com/poze/mare/fghdfg_1190045434.jpg"
+"http://dl.dropbox.com/u/38475430/Surprise%20Lunch%20Pics/DSC_0211.jpg",
+"http://dl.dropbox.com/u/38475430/Surprise%20Lunch%20Pics/DSC_0209.jpg",
+"http://dl.dropbox.com/u/38475430/Surprise%20Lunch%20Pics/DSC_0212.jpg",
+"http://dl.dropbox.com/u/38475430/Surprise%20Lunch%20Pics/DSC_0213.jpg"
 ]
 
   def collection
