@@ -1,6 +1,6 @@
 require 'random_enumerable'
 
-# from http://www.rickwalton.com/curricul/lanimals.htm
+# from backend, some application names
 class AnimalNames
   include RandomEnumerable
   @@names = [

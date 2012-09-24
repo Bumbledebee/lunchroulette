@@ -1,0 +1,14 @@
+=== Config Vars for hidden-plateau-2032
+DATABASE_URL:                postgres://
+wpkmzbcxcfyvsj
+nfKTB9NV5TFKxlPwhw4D8O3xrv
+@
+ec2-23-21-209-108.compute-1.amazonaws.com:5432
+dffjtrksmtj3as
+
+GEM_PATH:                    vendor/bundle/ruby/1.9.1
+HEROKU_POSTGRESQL_BLACK_URL: postgres://wpkmzbcxcfyvsj:nfKTB9NV5TFKxlPwhw4D8O3xrv@ec2-23-21-209-108.compute-1.amazonaws.com:5432/dffjtrksmtj3as
+LANG:                        en_US.UTF-8
+PATH:                        bin:vendor/bundle/ruby/1.9.1/bin:/usr/local/bin:/usr/bin:/bin
+RACK_ENV:                    production
+RAILS_ENV:                   production

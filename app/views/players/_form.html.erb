@@ -23,7 +23,11 @@
     <%= f.collection_select :department, Player::DEPARTMENTS, :to_s, :to_s, 
        :include_blank => true %>
   </div>
-
+  <div class="field">
+    <%= f.label :leader %><br />
+    <%= f.collection_select :leader, Player::LEADER, :to_s, :to_s, 
+       :include_blank => true %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>

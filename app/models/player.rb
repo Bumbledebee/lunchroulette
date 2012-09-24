@@ -6,4 +6,7 @@ class Player < ActiveRecord::Base
   attr_accessible :email, :name
 
   DEPARTMENTS = ['Customer Support', 'IT and Product', 'HR and Administrative', 'Billing', 'Advertiser', 'Publisher', 'Marketing and Design']
+  
+  LEADER = ['Sure, no prob', 'Only if not enough']
+    
 end
