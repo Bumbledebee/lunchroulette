@@ -6,7 +6,7 @@
     <h3>Lunch Group <span class=name><%=group.name%></span> @ <span class=place><%=group.place%></span></h3>
       <ul>
       <% group.players.each do |player| %>
-        <li class=player><%= player.name %></li>
+        <li class=player><%= player.name %> , <%= player.department%> , <%= player.leader %></li>
       <% end %>
       </ul>
   </div>
