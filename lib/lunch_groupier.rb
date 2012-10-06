@@ -9,7 +9,7 @@ class LunchGroupier
   end
 
   def create_players_groups
-    num_groups = Player.count/2
+    num_groups = Player.count/5
     playersa = Player.find_all_by_department('IT and Product')
     playersb = Player.find_all_by_department('Customer Support')
     playersc = Player.find_all_by_department('HR and Administrative')
