@@ -12,3 +12,7 @@ Player.blueprint do
   name  { "Name #{sn}" }
   email { "#{sn}@example.com" }
 end
+
+Authentication.blueprint do
+  # Attributes here
+end
