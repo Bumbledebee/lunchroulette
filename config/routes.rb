@@ -4,5 +4,5 @@ LunchRoulette::Application.routes.draw do
   root :to => 'roulette#signup'
   match 'spin' => 'roulette#spin'
 
-  resources :players, :only => [:create, :show, :new]
+  resources :players, :only => [:create, :show, :new, :update]
 end
