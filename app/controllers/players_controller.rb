@@ -32,6 +32,7 @@ class PlayersController < ApplicationController
     end
   end
 
+
   # GET /players/1/edit
   def edit
     @player = Player.find(params[:id])
@@ -41,6 +42,10 @@ class PlayersController < ApplicationController
   # POST /players.json
   def create
     @player = Player.new(params[:player])
+    @user = session[:user]
+    @player.email = @user.uid
+    p 'blabla' + @player.inspect
+  
 
     respond_to do |format|
       if @player.save
@@ -52,6 +57,9 @@ class PlayersController < ApplicationController
       end
     end
   end
+
+     
+
 
   # PUT /players/1
   # PUT /players/1.json

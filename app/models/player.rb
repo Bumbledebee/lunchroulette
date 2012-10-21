@@ -5,7 +5,7 @@ class Player < ActiveRecord::Base
     :message => "Someone already signed up with that name - please distinguish yourself!" }
   attr_accessible :email, :name, :department, :leader
 
-  DEPARTMENTS = ['Customer Support', 'IT and Product', 'HR and Administrative', 'Billing', 'Advertiser', 'Publisher', 'Marketing and Design']
+  DEPARTMENTS = ['Customer Support', 'IT and Product', 'HR and Administrative', 'Billing and Accounting', 'Advertiser', 'Publisher', 'Marketing and Design']
   
   LEADER = ['Sure, no prob', 'Only if not enough','Not this time']
     

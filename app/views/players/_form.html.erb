@@ -14,14 +14,11 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  </div>
+ 
   <div class="field">
     <%= f.label :department %><br />
     <%= f.collection_select :department, Player::DEPARTMENTS, :to_s, :to_s, 
-       :include_blank => true %>
+       :include_blank => false%>
   </div>
   <div class="field">
     <%= f.label :leader %><br />
@@ -30,6 +27,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Submit" %>
   </div>
 <% end %>

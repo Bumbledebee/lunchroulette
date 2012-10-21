@@ -10,15 +10,15 @@ class LunchGroupier
 
   def create_players_groups
     num_groups = Player.count/5
-    playersa = Player.find_all_by_department('IT and Product')
+  playersa = Player.find_all_by_department('IT and Product')
     playersb = Player.find_all_by_department('Customer Support')
     playersc = Player.find_all_by_department('HR and Administrative')
     playersd = Player.find_all_by_department('Marketing and Design')
     playerse = Player.find_all_by_department('Publisher')
     playersf = Player.find_all_by_department('Advertiser')
-    playersg = Player.find_all_by_department('Billing')
-    
-    player_groups =[]
+    playersg = Player.find_all_by_department('Billing and Accounting')
+
+ player_groups =[]
     num_groups.times.each do
       player_groups << []
     end
