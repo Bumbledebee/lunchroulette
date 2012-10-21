@@ -10,14 +10,13 @@ class LunchGroupier
 
   def create_players_groups
     num_groups = Player.count/5
-  playersa = Player.find_all_by_department('IT and Product')
-    playersb = Player.find_all_by_department('Customer Support')
-    playersc = Player.find_all_by_department('HR and Administrative')
-    playersd = Player.find_all_by_department('Marketing and Design')
-    playerse = Player.find_all_by_department('Publisher')
-    playersf = Player.find_all_by_department('Advertiser')
-    playersg = Player.find_all_by_department('Billing and Accounting')
-
+    playersa = Player.find_all_by_department('IT and Product').shuffle
+    playersb = Player.find_all_by_department('Customer Support').shuffle
+    playersc = Player.find_all_by_department('HR and Administrative').shuffle
+    playersd = Player.find_all_by_department('Marketing and Design').shuffle
+    playerse = Player.find_all_by_department('Publisher').shuffle
+    playersf = Player.find_all_by_department('Advertiser').shuffle
+    playersg = Player.find_all_by_department('Billing and Accounting').shuffle
  player_groups =[]
     num_groups.times.each do
       player_groups << []
