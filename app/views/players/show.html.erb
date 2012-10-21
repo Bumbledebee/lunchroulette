@@ -14,5 +14,8 @@
     <% if flash[:error] %>
       <p class="error"><%= flash[:error] %></p>
     <% end %>
+
+
+     <%= link_to 'Logout', '/logout', :method=>'delete' %>   
    
 
