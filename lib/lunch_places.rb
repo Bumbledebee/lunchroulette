@@ -7,11 +7,11 @@ class LunchPlaces
   @@names = [
 "RosenBurger",
 "PapaPane",
-"Dang Fang",
+"Fam Dang",
 "Yurok",
-"xxxxx",
-"Antipodes",
-"Luigi Zuckermann",
+"Spagehtti Western",
+"Nola`s am Weinberg",
+"Dudu",
 "Yumcha Heroes",
 "Good Morning Vietam",
 "Japanes Place Across From Base"

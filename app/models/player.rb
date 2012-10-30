@@ -9,7 +9,7 @@ class Player < ActiveRecord::Base
   
   LEADER = ['Sure, no prob', 'Only if not enough','Not this time']
 
-  PARTICIPATING = ['Yes', 'No']
+  PARTICIPATING = ['No', 'Yes']
     
 end
 
