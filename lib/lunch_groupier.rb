@@ -8,16 +8,16 @@ class LunchGroupier
     @lunch_places = lunch_places
   end
 
-  def create_players_groups
-    num_groups = Player.count/5
-    playersa = Player.find_all_by_department('IT and Product').shuffle
-    playersb = Player.find_all_by_department('Customer Support').shuffle
-    playersc = Player.find_all_by_department('HR and Administrative').shuffle
-    playersd = Player.find_all_by_department('Marketing and Design').shuffle
-    playerse = Player.find_all_by_department('Publisher').shuffle
-    playersf = Player.find_all_by_department('Advertiser').shuffle
-    playersg = Player.find_all_by_department('Billing and Accounting').shuffle
- player_groups =[]
+   def create_players_groups
+    num_groups = Player.where(:participating =>'Yes').count/2
+    playersa = Player.where(:participating =>'Yes').find_all_by_department('IT and Product').shuffle
+    playersb = Player.where(:participating =>'Yes').find_all_by_department('Customer Support').shuffle
+    playersc = Player.where(:participating =>'Yes').find_all_by_department('HR and Administrative').shuffle
+    playersd = Player.where(:participating =>'Yes').find_all_by_department('Marketing and Design').shuffle
+    playerse = Player.where(:participating =>'Yes').find_all_by_department('Publisher').shuffle
+    playersf = Player.where(:participating =>'Yes').find_all_by_department('Advertiser').shuffle
+    playersg = Player.where(:participating =>'Yes').find_all_by_department('Billing and Accounting').shuffle
+     player_groups =[]
     num_groups.times.each do
       player_groups << []
     end
