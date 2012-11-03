@@ -9,7 +9,7 @@ class LunchGroupier
   end
 
    def create_players_groups
-    num_groups = Player.where(:participating =>'Yes').count/2
+    num_groups = Player.where(:participating =>'Yes').count/5
     playersa = Player.where(:participating =>'Yes').find_all_by_department('IT and Product').shuffle
     playersb = Player.where(:participating =>'Yes').find_all_by_department('Customer Support').shuffle
     playersc = Player.where(:participating =>'Yes').find_all_by_department('HR and Administrative').shuffle
