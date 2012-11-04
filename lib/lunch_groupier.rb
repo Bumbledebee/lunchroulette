@@ -8,26 +8,27 @@ class LunchGroupier
     @lunch_places = lunch_places
   end
 
-   def create_players_groups
+  def create_players_groups
     num_groups = Player.where(:participating =>'Yes').count/5
-    playersa = Player.where(:participating =>'Yes').find_all_by_department('IT and Product').shuffle
-    playersb = Player.where(:participating =>'Yes').find_all_by_department('Customer Support').shuffle
-    playersc = Player.where(:participating =>'Yes').find_all_by_department('HR and Administrative').shuffle
-    playersd = Player.where(:participating =>'Yes').find_all_by_department('Marketing and Design').shuffle
-    playerse = Player.where(:participating =>'Yes').find_all_by_department('Publisher').shuffle
-    playersf = Player.where(:participating =>'Yes').find_all_by_department('Advertiser').shuffle
-    playersg = Player.where(:participating =>'Yes').find_all_by_department('Billing and Accounting').shuffle
-     player_groups =[]
+    player_groups =[]
     num_groups.times.each do
       player_groups << []
     end
 
-    playersall = playersa + playersb + playersc + playersd + playerse + playersf + playersg
+    playersall = []
+ 
+    Player::DEPARTMENTS.each do |department|
+     players_department_yes = Player.where(:participating =>'Yes').find_all_by_department(department).shuffle
+     players_department_yes.each do |p|
+       playersall << p
+     end
+    end
+   
 
-    playersall.each_with_index do |p, i|
-      group_num = i % num_groups
-      p "putting player #{p.name} in group #{group_num}"
-      player_groups[group_num]<< p
+    playersall.each_with_index do |player, index|
+      group_num = index % num_groups
+      p "putting player #{player.name} in group #{group_num}"
+      player_groups[group_num]<< player
     end
 
 

@@ -6,4 +6,8 @@ class LunchGroup
     @name = name
     @place = place
   end
+
+  def sendemail
+  	each LunchGroup
+  end
 end
