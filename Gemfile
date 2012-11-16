@@ -9,6 +9,8 @@ gem 'omniauth-google'
 group :development do
   gem 'sqlite3'
   gem 'carrierwave'
+  gem 'geocoder'
+  gem 'gmaps4rails'
 end
 group :production do
   gem 'pg'
