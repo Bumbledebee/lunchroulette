@@ -1,4 +1,6 @@
 LunchRoulette::Application.routes.draw do
+  resources :places
+
   match '/auth/:provider/callback' => 'authentications#create'
  
   root :to => 'roulette#signup'

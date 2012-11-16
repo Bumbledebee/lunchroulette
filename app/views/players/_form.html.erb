@@ -23,7 +23,7 @@
   <div class="field">
     <%= f.label :leader %><br />
     <%= f.collection_select :leader, Player::LEADER, :to_s, :to_s, 
-       :include_blank => true %>
+       :include_blank => false %>
   </div>
     <div class="field">
     <%= f.label :participating %><br />
@@ -34,4 +34,9 @@
   <div class="actions">
     <%= f.submit "Submit" %>
   </div>
+
+  <div id=signup>
+  <%= link_to("View places", "/places") %>
+  </div>
+
 <% end %>

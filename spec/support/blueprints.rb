@@ -16,3 +16,7 @@ end
 Authentication.blueprint do
   # Attributes here
 end
+
+Place.blueprint do
+  # Attributes here
+end
