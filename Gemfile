@@ -8,6 +8,7 @@ gem 'omniauth-google'
 
 group :development do
   gem 'sqlite3'
+  gem 'carrierwave'
 end
 group :production do
   gem 'pg'
