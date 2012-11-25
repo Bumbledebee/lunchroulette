@@ -19,8 +19,8 @@
     <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="/"/>SponsorPay Surprise Lunch</a><ul class="nav">
-              <li class="active"><a href="/places">View Places</a></li>
-              <li class="active"><a href="/">My participation</a></li>
+              <li class="active"><% if current_user %><a href="/places">View Places</a><% end %></li>
+              <li class="active"><% if current_user %><a href="/">My participation</a><% end %></li>
             </ul>
         </div>
     </div>

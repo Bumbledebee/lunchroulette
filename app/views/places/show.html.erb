@@ -10,6 +10,35 @@
   <%= @place.address %>
 </p>
 
-<%= link_to 'Add a new comment', new_comment_path %>
+
+  <p>
+  <b>Comments:</b>
+  </p>
+<ul>
+      <% @place.comments.each do |comment| %>
+        <li class=comment><%= comment.name %> , <%= comment.comment%> , 
+         </li> 
+      <% end %>
+ </ul>
+
+<h2>Add a comment:</h2>
+<%= form_for([@place, @place.comments.build]) do |f| %>
+    <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br />
+    <%= f.file_field :picture %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>

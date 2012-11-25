@@ -23,7 +23,7 @@ class AuthenticationsController < ApplicationController
     reset_session
     redirect_to '/'
   end
-
+  
 
 end
 
