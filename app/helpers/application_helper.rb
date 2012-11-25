@@ -1,6 +1,10 @@
 module ApplicationHelper
 
   def current_user
-    false
+    if @player!=nil
+      true
+    else
+      false
+    end
   end
 end
