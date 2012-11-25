@@ -3,10 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Restaurant name</th>
-    <th>Comment</th>
     <th>Address</th>
-    <th>Picture</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,20 +12,13 @@
 <% @places.each do |place| %>
   <tr>
     <td><%= place.name %></td>
-    <td><%= place.restaurant_name %></td>
-    <td><%= place.comment %></td>
     <td><%= place.address %></td>
-    <td><%= place.picture %></td>
     <td><%= link_to 'Show', place %></td>
     <td><%= link_to 'Edit', edit_place_path(place) %></td>
     <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
-
-<br/>
-<%= gmaps4rails(@pins) %>
-<%= yield :scripts %>
 
 <br />
 
