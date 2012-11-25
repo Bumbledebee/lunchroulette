@@ -12,7 +12,7 @@
 
 <p>
   <b>Picture:</b>
-  <%= @comment.picture %>
+  <%= image_tag(@comment.picture_url, :width => 600) if @comment.picture.present? %>
 </p>
 
 
