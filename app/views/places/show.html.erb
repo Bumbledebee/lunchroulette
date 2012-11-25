@@ -16,7 +16,7 @@
   </p>
 <ul>
       <% @place.comments.each do |comment| %>
-        <li class=comment><%= comment.name %> , <%= comment.comment%> , 
+        <li class=comment><%= comment.player.name %> , <%= comment.comment%> , 
          </li> 
       <% end %>
  </ul>
@@ -39,6 +39,17 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/"/>SponsorPay Surprise Lunch</a><ul class="nav">
+              <li class="active"><a href="/places">View Places</a></li>
+              <li class="active"><a href="/">My participation</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>

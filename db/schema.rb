@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20121125104758) do
     t.text     "comment"
     t.string   "picture"
     t.integer  "place_id"
+    t.integer  "player_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

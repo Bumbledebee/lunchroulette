@@ -11,5 +11,7 @@ LunchRoulette::Application.routes.draw do
   match 'logout' => 'authentications#destroy'
 
 
-  resources :players, :only => [:create, :show, :new, :update]
+  resources :players, :only => [:create, :show, :new, :update] do
+    resources :comments
+  end
 end

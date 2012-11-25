@@ -1,4 +1,5 @@
 class Player < ActiveRecord::Base
+  has_many :comments
   validates_presence_of :email, :name
   validates :email, :uniqueness => { :message => "Someone already signed up with that email" }
   validates :name, :uniqueness => { :case_sensitive => false,
