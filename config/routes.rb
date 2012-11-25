@@ -1,6 +1,4 @@
 LunchRoulette::Application.routes.draw do
-  resources :comments
-
   resources :places
 
   match '/auth/:provider/callback' => 'authentications#create'
