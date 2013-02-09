@@ -3,6 +3,8 @@ require 'lunch_pics'
 
 class RouletteController < ApplicationController
   include LunchGroupierSupport
+  http_basic_authenticate_with :name => ENV['HTTP_BASIC_USERNAME'], :password => ENV['HTTP_BASIC_PASSWORD'], :except => :signup
+
 
   def signup
   	@user = session[:user]
@@ -16,14 +18,13 @@ class RouletteController < ApplicationController
     else
         render "signup.html.erb"
     end
-
-    
   end
+
+
 
 
   def spin
     @groups = lunch_groupier.create_groups
-    @pic = LunchPics.new.take_random(1).first
   end
 
 end
